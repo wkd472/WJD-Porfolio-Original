@@ -1,0 +1,104 @@
+#                       timeOn1
+#                       by Wayne Dupont
+#                       April, 15, 2012
+#
+#       Assignment : P10
+#       Due Date : April 22, 2012
+#
+#       This script will ask the user for a user prefix
+#       If the prefix is not a valid it will display an error then exit
+#       with error code 2.
+#       If the prefix is valid but not logged in it will display that info
+#       and exit with error code 1
+#       If the prefix is valid and logged in it will display the related user info
+#       including the user name, terminal and time logged in to the system
+#       it will then exit with error code 0. I will list this information for
+#	all of the users logged in with that prefix.
+#
+
+# Clear the screen
+clear
+
+# Determine if the user entered a prefix or many prefixes
+if [ $# -ne 1 ]
+then
+# Ask user for only one prefix
+echo -e "Please enter a single, valid user id prefix: \c"
+# Get the user prefix 
+read prefix
+else
+# Save the user prefix from the command line
+prefix=$1
+fi
+
+# Is the prefix in the system
+valid=$(grep $prefix /etc/passwd | wc -l)
+
+# We do not have a user prefix that matches
+if [ $valid -eq 0 ]
+then
+echo "The prefix you entered, $prefix is not a user id prefix on this system."
+exit 2
+fi
+
+# This should be a valid prefix see if they are logged in 
+loggedon=$(who | grep $prefix | wc -l)
+
+# Check if the user is logged in
+if [ $loggedon -gt 0 ]
+then
+
+# Store the desired users with that prefix into a file
+who | grep $prefix > users.txt
+
+# Save the file name into a variable
+FILENAME=users.txt
+
+# Now loop through the file one line at a time
+cat $FILENAME | while read LINE
+do
+	# Get the user prefix
+	user=$(echo "$LINE" | cut -c1-8)
+
+	# Get the terminl logged into
+        term=$(echo "$LINE" | cut -c10-15)
+
+	# Get the name of user from the system
+	name=$(grep $user /etc/passwd | cut -d: -f5 | sort | sed "s/\(.*\),\(.*\)/\2 \1/")
+
+	# Get the hour and minutes of login
+        lhour=$(echo "$LINE" | cut -c30,31 | sed 's/^0//')
+        lmin=$(echo "$LINE" | cut -c33,34 | sed 's/^0//')
+
+        # Get the current hour and minutes
+        chour=$(date | cut -c12,13 | sed 's/^0//')
+        cmin=$(date | cut -c15,16 | sed 's/^0//')
+        
+	# Calculate the hours logged in
+        if [ $chour -ge $lhour ]
+        then
+            	hrs=$((chour - lhour))
+        else
+            	hrs=$(((lhour - chour) + 24))
+        fi
+
+	# Calculate the minutes logged in
+        if [ $cmin -gt $lmin ]
+        then
+            	min=$((cmin - lmin))
+        else
+            	min=$((60 - (lmin - cmin)))
+        fi
+
+	# Display the user information
+        echo -e "$name is logged in to terminal $term and has been for $hrs hour(s) and $min minute(s).\n"
+done
+	# Display the number of users with that prefix
+	echo -e " There is/are $loggedon user(s) with a user id prefix of $prefix on the system. \n"
+exit 0
+else 
+	# Now user with that prefix logged in
+	echo "No user with a user id prefix of $prefix is on the system."
+exit 1
+fi
+

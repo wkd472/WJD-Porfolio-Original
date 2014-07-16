@@ -1,0 +1,46 @@
+/* ===== King James table ===== */
+
+.kj {
+	width: 648px;
+	font-weight: bold;
+	float: left;
+}
+
+/* ===== Douay-Rheims table ===== */
+
+.dr {
+	color: #666;
+	width: 550px;
+	padding: 0 49px;
+	font-weight: bold;
+	float: left;
+}
+
+/* ===== King James and Douay-Rheims tables ===== */
+
+h3 {
+	font-size: 105%;
+	text-align: left;
+}
+
+.verses {
+	width: 530px;
+}
+
+.wide {
+	width: 40px;
+}
+
+.verse {
+	text-align: left;
+}
+
+/* ===== Song Verses ===== */
+
+.versesong{
+	width: 500px;
+}
+
+.song {
+	text-align: center;
+}

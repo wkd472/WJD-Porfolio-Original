@@ -1,0 +1,198 @@
+<!--
+    index.html
+
+    This is the code for my web page. I'm using HTML5 because I wanted to use the <video> tag to display 
+    some video clips on this page. Also it gives me a chance to experiment with some new features.
+-->
+<!DOCTYPE html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <title>WJD Website</title>
+        
+        <!-- This is the media query section (here we just use media types all and screen and call the related CSS file -->
+        <link rel="stylesheet" href="css/master.css" type="text/css" media="all" title="no title" charset="utf-8" />
+        <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    	
+        
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        
+        <script src="js/detect.js"></script>
+        <script src="js/buttons.js"></script>
+        <script src="js/main.js"></script>
+        
+    </head>
+
+    <body>
+        <div id="mainDiv">
+        <div id="page">
+            <div id="secondary">
+                <div id="logo">
+                <img src="images/wayne.jpg" width="180" height="180" alt="" />
+                </div> <!-- /#logo -->
+                <div id="secondaryContent">
+                    <h3>About</h3>
+                    <p>You&rsquo;re visiting the website of Wayne Dupont. (CodeDog472)</p>
+                    
+                     <div id="logo">
+                        <img src="images/codedog.png" width="180" height="180" alt="" />
+                     </div> <!-- /#logo -->
+                     
+                    <h3>Take a look</h3>
+                    <ul>
+                        <li><a href="resume/" rel="">Resume</a></li>
+                    </ul>
+                    
+                    <h3>Example Code</h3>
+                    <ul>
+                        <li><a href="examples/" rel="">Code Samples</a></li>
+                    </ul>
+                    
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://learnable.com/sign-in?from=%2Fdashboard" rel="">Learnable</a></li>
+                        <li><a href="http://www.lagmonster.org/docs/vi.html" rel="">VI Cheat Sheet</a></li>
+                        <li><a href="https://gist.github.com/henrik/1967800" rel="">TMux Cheat Sheet</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/" rel="">Mozella Dev Network</a></li>
+                        <li><a href="http://www.w3schools.com/" rel="">W3 Schools</a></li>
+                        <li><a href="https://github.com/login" rel="">GitHub Login</a></li>
+                        <li><a href="http://www.w3schools.com/js/" rel="">JavaScript</a></li>
+                        <li><a href="http://jquery.com/" rel="">JQuery</a></li>
+                        <li><a href="https://npmjs.org/package/nodesql" rel="">Node SQL</a></li>
+                        <li><a href="http://expressjs.com/" rel="">Express JS</a></li>
+                        <li><a href="http://nodejs.org/" rel="">Node JS</a></li>
+                        <li><a href="https://npmjs.org/" rel="">NPM</a></li>
+                        <li><a href="http://www.cplusplus.com/" rel="">C++</a></li>
+                        <li><a href="http://msdn.microsoft.com/en-us/windows/hardware/gg454513.aspx" rel="">Windows Driver Kit</a></li>
+                        <li><a href="http://msdn.microsoft.com/en-us/default.aspx" rel="">Microsoft Dev Network</a></li>
+                        <li><a href="https://developer.apple.com/programs/ios/" rel="">Apple IOS Development</a></li>
+                        <li><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html" rel="">Objective-C</a></li>
+                        <li><a href="http://www.microsoft.com/visualstudio/eng/products/visual-studio-2010-express" rel="">Visual Studio</a></li>
+                        <li><a href="http://www.mysql.com/" rel="">MySQL</a></li>
+                        <li><a href="http://www.cheatography.com/davechild/cheat-sheets/linux-command-line/" rel="">Linux Cheat Sheet</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" rel="">TCP and UDP Ports</a></li>
+                        <li><a href="http://www.videojs.com/" rel="">Video.JS</a></li>
+                        <li><a href="http://stackoverflow.com/" rel="">Stack Overflow</a></li>
+                        <li><a href="http://googledevelopers.blogspot.com/" rel="">Google Developers Blog</a></li>
+                        <li><a href="http://angularjs.org/" rel="">AngularJS</a></li>
+                    </ul>
+                    
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="http://www.whatismyip.com/" rel="">What is my IP</a></li>
+                        <li><a href="http://aws.amazon.com/console/" rel="">AWS Console</a></li>
+                        <li><a href="http://jsfiddle.net/" rel="">JSFiddle</a></li>
+                        <li><a href="http://ipadpeek.com/" rel="">iPad/iPhone Peek</a></li>
+                        <li><a href="http://winscp.net/eng/index.php" rel="">Win SCP</a></li>
+                        <li><a href="http://www.putty.org/" rel="">Putty</a></li>
+                        <li><a href="http://www.heidisql.com/" rel="">HeidiSQL</a></li>
+                        <li><a href="http://www.quirksmode.org/html5/tests/video.html" rel="">QuirksMode HTML5 Video Test</a></li>
+                    </ul>
+                    
+                    <h3>Contact</h3>
+                    <p>You can e-mail me at wkd472 @ gmail.com </p>
+                    
+                    <h3>Site</h3>
+                    <p>
+                        This site is served up on a Amazon Web Services (AWS) server
+                        with a Ubuntu Linux OS. I installed a LNMP stack on this server 
+                        and configured it to serve this page.
+                    </p>
+                </div> <!-- /#secondaryContent -->
+            </div> <!-- /#secondary -->
+            <div id="content">
+                <div class="post">
+                    <h2>Biography</h2>
+                    <p></p>
+                        <p align="left">I am a Sr. Software Developer with 30 years experience. I am looking for a position where I can use my knowledge of various software languages to develop Web applications or desktop applications for Windows or Linux environments. I am able to debug complex software issues down to the hardware register level. I can work in a team or as an individual developer,  I am able to work with current specifications or write new software design documentation and interface with marketing, SQE team and customers.    </p>
+                        <p align="left">I have application development experience with C, C++, C#, and VB.net using Visual Studio. I also have Embedded software development experience writing USB class drivers for Audio and Mass Storage.</p>
+                        <p>I have Web development  (HTML, CSS, JavaScript, JQuery, Java, PHP, MySQL, and Ajax) experience and a Java Programmer certificate.</p>
+                        <p>I have worked on client and server side web applications. I have experience with node.js, express.js and NodeSQL</p>
+                        <p>To further my knowledge of the current Web technologies, I am taking online classes via Learnable.com. Currently, I am taking courses in
+                        node.js, bootstrap.js and backbone.js. </p>
+                        <p>I am highly motivated and passionate about new technologies.</p>
+                        <hr>
+                        <p></p>
+                        <p>
+                            I added this section to display the browser name and version that this page is running on. I wrote a
+                            JavaScript function to call the detection code and then to display the 
+                            browser name and version.
+                        </p>
+                        <table id="bInfo" border="1">
+                            <tr>
+                                <th>Detected Browser</th>
+                                <th>Version</th>
+                            </tr>    
+                            <tr>
+                                <td id="browser">Chrome</td>
+                                <td id="version">10</td>
+                            </tr>
+                        </table>
+                        <br>    
+                        <hr>
+                        <p></p>    
+                        <h2>Playing video using HTML5</h2>
+                        <p></p>
+                        <p>
+                            <span>This is just an example of playing video using HTML5's 
+                            video element. Here I am using this element and some JQuery
+                            to dynamically load new video sources in response to a button click
+                            and then some JavaScript to startup the playback. HTML5 makes it
+                            easier to add video to web sites. In the past I've used the VLC plugin
+                            to do this. It was a real pain and only worked in FireFox. I found out that
+                            IE plays only MP4 files and Firefox only plays ogg and webm files. So I found 
+                            a neat script at http://www.quirksmode.org/js/detect.html that detects the browser type
+                            and based on the browser type I then play the supported video type.
+                            <br><br>
+                            <strong><em>Note : On the left panel of this page under tools there is a link to a 
+                            utility that detects the type of video support your browser has when using 
+                            the HTML5 video element.</em></strong>
+                            </span>
+                            </p>
+                            <hr><br>
+                            <p>
+                                <strong><em>To watch these videos you need to install the latest version 
+                                    of IE, Chrome, Safari, or Firefox.</em></strong>   
+                            </p>    
+                            
+                            <video id="video" width="480" height="270" controls autoplay>
+                                <source id="video1" src="video/earthfrommoon.mp4" type="video/mp4" >
+                                <source id="video2" src="video/earthfrommoon.ogv" type="video/ogg">
+                                
+                                <p class="warning">Your browser does not support HTML5 video.</p>
+                            </video>
+                    
+                            <p>Select a Video to Play</p>
+                            <button type="button" id="video1btn" class="button" style="margin: 10px;">Earth 24hr Cycle</button>
+                            <button type="button" id="video2btn" class="button" style="margin: 10px;">Earth from Moon</button>
+                            <button type="button" id="video3btn" class="button" style="margin: 10px;">Atomic Fusion</button>
+                            <button type="button" id="video4btn" class="button" style="margin: 10px;">Cartoon Beatles</button>
+                            <button type="button" id="video5btn" class="button" style="margin: 10px;">Beatles in Japan</button>
+                            
+                            <!--
+                            Place Holder for Adaptive Streaming
+                            <video
+                                src="http://playertest.longtailvideo.com/adaptive/bipbop/bipbop.m3u8"
+                                height="270" width="480"
+                                controls
+                                autoplay
+                                loop
+                                >
+                            </video>
+                            -->
+                </div> <!-- /.post -->
+            </div> <!-- /#content -->
+            <div id="footer">
+                <!-- fake footer -->
+            </div> <!-- /#footer -->
+        </div> <!-- /#page -->
+        </div>
+        
+    </body>
+</html>
+
+

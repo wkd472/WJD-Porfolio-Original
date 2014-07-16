@@ -1,0 +1,85 @@
+#			timeOn
+#			by Wayne Dupont
+#			April, 8, 2012
+#
+#	Assignment : P09
+#	Due Date : April 15, 2012
+#
+#	This script will ask the user for a user ID
+#       If the user is not a valid user it will display an error then exit
+#	with error code 2.
+#	If the user is valid bu not logged in it will display that info
+#	and exit with error code 1
+#	If the user is logged in it will display the related user info
+#	including the user name, terminal and time logged in to the system
+#	it will then exit with error code 0.
+#
+
+# Clear the screen
+clear
+
+# Determine if the user entered a user id or many user id's
+if [ $# -ne 1 ]
+then
+# Ask user for only one ID
+echo -e "Please enter a single user ID: \c"
+# Get the user id 
+read user
+else
+# Save the user ID from the command line
+user=$1
+fi
+
+# Is the user in the system
+valid=$(grep $user /etc/passwd | wc -l)
+
+# We do not have a user by that ID
+if [ $valid -eq 0 ]
+then
+echo "$user is NOT a valid user"
+exit 2
+fi
+
+# This should be a valid user see it they are logged in 
+loggedon=$(who | grep -m1 $user | wc -l)
+
+# Get the name of user from the system
+name=$(grep -m1 $user /etc/passwd | cut -d: -f5 | sort | sed "s/\(.*\),\(.*\)/\2 \1/")
+
+# Check if the user is logged in
+if [ $loggedon -gt 0 ]
+then
+	# Get the hour and minutes of login
+	lhour=$(who | grep -m1 $user | cut -c30,31 | sed 's/^0//')
+	lmin=$(who | grep -m1 $user | cut -c33,34 | sed 's/^0//')
+
+	# Get the current hour and minutes
+	chour=$(date | cut -c12,13 | sed 's/^0//')
+	cmin=$(date | cut -c15,16 | sed 's/^0//')
+
+	# Get the terminal logged into
+	term=$(who | grep -m1 $user | cut -c10-15)
+ 
+	# Calculate the hours logged in
+	if [ $chour -ge $lhour ]
+	then
+		hrs=$((chour - lhour))
+	else
+		hrs=$(((lhour - chour) + 24))
+	fi
+
+	# Calculate the minutes logged in
+	if [ $cmin -gt $lmin ]
+	then
+		min=$((cmin - lmin))
+	else
+		min=$((60 - (lmin - cmin)))
+	fi
+	
+	# Display the user information
+	echo -e "$name is logged in to terminal $term and has been for $hrs hour(s) and $min minute(s).\n\n"
+exit 0
+else 
+echo "$name is NOT  logged in"
+exit 1
+fi

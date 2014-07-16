@@ -1,0 +1,38 @@
+/* ===== Hebrew table ===== */
+
+table {
+	margin: 5px auto 10px auto;
+}
+
+td {
+	padding: 1px 10px;
+	vertical-align: text-top;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+.hebrew {
+	width: 1300px;
+	margin: 0 auto;
+	float: left;
+}
+
+.hebrewfont {
+	font-size: 160%;
+	letter-spacing: 1px;
+}
+
+.nopad {
+	padding: 0;
+}
+
+/* ----- second table for longer verses ----- */
+
+.hebrew2 {
+	margin: 0 auto;
+	padding-top: 10px;
+	float: right;
+}

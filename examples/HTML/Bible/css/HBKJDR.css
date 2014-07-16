@@ -1,0 +1,54 @@
+/* ===== body and main div's ===== */
+
+body {
+	font-family: times new roman, serif;
+	text-align: center;
+}
+
+.main {
+	background-color: #fff2d2;
+	width: 1300px;
+	margin: 0 auto;
+}
+
+.outer {
+	width: 1300px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+/* ===== Header Div's ===== */
+
+.headers {
+	width: 1300px;
+	float: left;
+}
+
+.book {
+	padding-left: 30px;
+}
+
+.section {
+	color: #666;
+	font-size: 120%;
+	font-style: italic;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+/* ===== Notes Div ===== */
+
+.comments {
+	color: #381438;
+	font-size: 85%;
+	font-style: normal;
+	text-align: left;
+	width: 1200px;
+	padding: 0 50px;
+	margin-bottom: 25px;
+	clear: left;
+}
+
+#end {
+	padding: 20px 0;
+}

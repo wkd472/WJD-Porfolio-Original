@@ -1,0 +1,281 @@
+body {
+    background-color: gray;
+	background-image: url('');
+	background-repeat: no-repeat;
+	background-position: top center;
+	color: #c0c0c0;
+}
+
+div#page {
+	background-color: black;
+	width: 800px;
+	padding: 30px;
+	padding-bottom: 60px;
+}
+
+div#content {
+	margin-left: 260px;
+}
+
+
+div#secondary {
+	width: 200px;
+	float: left;
+	color: #a0a0a0;
+}
+
+div#secondary p, div#secondary ul {
+	margin-bottom: 1.8em;
+}
+
+div#logo {
+	margin-bottom: 40px;
+}
+
+div#secondaryContent ul li {
+	list-style-type: none;
+}
+
+div#secondaryContent a {
+	color: #a0a0a0;
+}
+
+div#secondaryContent h3 a {
+	color: #60606f;
+}
+
+h2 {
+	font-size: 133%;
+	font-weight: normal;
+}
+
+h3 {
+	color: #60606f;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 7.5pt;
+}
+
+a {
+	color: #c0c0c0;
+}
+
+a:hover {
+	color: #c01738;
+}
+
+div.post {
+	width: 480px;
+	margin-bottom: 60px;
+}
+
+div.post h2 a {
+	text-decoration: none;
+	color: #c0c0c0;
+}
+
+div.commentHeader, div.date {
+	color: #60606f;
+	text-transform: uppercase;
+	font-size: 7.5pt;
+}
+
+div.commentHeader a {
+	color: #60606f;
+	text-decoration: none;
+}
+
+ul.tweet_list li {
+	background-color: #1a1a1f;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+object { /* assume youtube vid */
+	width: 478px;
+	text-align: center;
+	border: 1px solid #2a2a2f;
+	
+}
+
+video {
+	margin-bottom: 14pt;
+}
+
+div.post img {
+	margin-top: 4px;
+	border: 1px solid #60606f;
+}
+
+div.post img.isolatedObject {
+	border: 0;
+}
+
+img.left {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+img.right {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+div.numComments {
+	margin-top: -20px;
+	text-align: right;
+	color: #60606f;
+	text-transform: uppercase;
+	font-size: 7.5pt;
+}
+
+div.numComments a {
+	color: #60606f;
+}
+
+div.pagination {
+	text-align: center;
+}
+
+div.pagination a, div.pagination span {
+	margin: 0 5px 0 5px;
+	padding: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	text-decoration: none;
+	background-color: #121215;
+}
+
+div.pagination a {
+	cursor: pointer;
+}
+
+div.pagination span {
+	color: #404048;
+	cursor: default;
+}
+
+div.pagination a:hover {
+	background-color: #c01738;
+	color: white;
+}
+
+div.comments {
+	margin-top: 40px;
+}
+
+div.comments div.comment {
+	margin-top: 20px;
+	background-color: #1a1a1f;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 5px;
+}
+
+div.comments form {
+	margin-top: 40px;
+	color: #60606f;
+}
+
+div.comments form label {
+	width: 70px;
+	margin-top: 5px;
+	float: left;
+}
+
+div.comments form input.text {
+	width: 180px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+textarea, input.text {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 9pt;
+	line-height: 14pt;
+	background-color: black;
+	padding: 5px;
+	border: 1px solid #1a1a1f;
+	color: #a0a0b0;
+}
+
+div.comments form textarea {
+	width: 470px;
+}
+
+div.comments form input.submit {
+	margin-top: 10px;
+	background-color: #121215;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 0;
+	background-image: url('/images/bg_button.png');
+	background-repeat: repeat-x;
+	color: #c0c0c0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 7.5pt;
+	padding: 5px 10px 5px 10px;
+	line-height: 14pt;
+	font-weight: normal;
+	float: right;
+}
+
+p.code {
+	font-family: 'Monaco', 'Consolas', monospace;
+	font-size: 7pt;
+	width: 470px;
+}
+
+div#footer {
+	clear: both;
+}
+
+input.itsatrap, textarea.itsatrap {
+	display: none;
+}
+
+div.tweetThis {
+	margin-top: 5px;
+}
+
+div.tweetThis a {
+	color: #60606f;
+	text-transform: uppercase;
+	font-size: 7.5pt;
+	text-decoration: none;
+}
+
+div.tweetThis a img {
+	border: 0;
+	margin-right: 5px;
+	vertical-align: bottom;
+}
+
+blockquote {
+	font-style: italic;
+	margin-top: 20px;
+	background-color: #1a1a1f;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 5px;
+	margin-bottom: 14pt;
+}
+
+blockquote p {
+	margin-bottom: 0;
+}
+
+.warning {
+    color:red;
+}
+
+#mainDiv {
+    margin:0 auto;
+    width:800px;
+    background-color: gray;
+}

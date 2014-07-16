@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", "Arial", sans-serif;
+	font-size: 9pt;
+	line-height: 14pt;
+}
+
+pre, p {
+	margin-bottom: 14pt;
+}
+
+ul, ol {
+	margin-bottom: 14pt;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+div#content ul, div#content ol {
+	padding-left: 14pt;
+}
+
+a img {
+	border: 0;
+}
+
+img {
+	max-width:100%;
+	vertical-align:middle;
+	border: 0;
+}
